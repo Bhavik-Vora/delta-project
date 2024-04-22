@@ -64,9 +64,9 @@ cookie:{
     maxAge: 7 * 24 * 60 * 60 * 1000, 
 }
 };
-// app.get("/",(req,res)=>{
-//     res.send("Hi I'm Root Directory ");
-// });
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+});
 
 app.use(session(sessionOptions));
 app.use(flash());
